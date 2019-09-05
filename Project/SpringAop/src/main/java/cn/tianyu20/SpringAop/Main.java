@@ -7,8 +7,8 @@ import cn.tianyu20.Config.Config;
 public class Main {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(Config.class);
-		IndexDao indexdao = annotationConfigApplicationContext.getBean(IndexDao.class);
-		System.out.println(indexdao);
-		indexdao.get();
+		IndexServiceImpl indexservice =  annotationConfigApplicationContext.getBean(IndexServiceImpl.class);
+		System.out.println(indexservice instanceof IndexService);
+		indexservice.select();
 	}
 }

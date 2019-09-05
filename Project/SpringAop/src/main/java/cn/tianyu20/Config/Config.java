@@ -6,7 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @ComponentScan("cn.tianyu20.SpringAop")
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true) //使用了Spring的Cjlable
 public class Config {
 	
 }
